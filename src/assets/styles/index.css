@@ -1,0 +1,70 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-gold: #997B4D;
+  --color-dark: #242828;
+  --color-cream: #F8EFEE;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B4833E;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B6230;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #B4833E rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-[#242828] text-[#F8EFEE] font-sans;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#997B4D] text-white px-8 py-3 rounded-full hover:bg-[#806640] transition-colors duration-300 inline-block;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}

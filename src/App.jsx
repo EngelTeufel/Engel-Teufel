@@ -1,0 +1,61 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
+import AgeVerification from './components/AgeVerification';
+import ContentProtection from './components/ContentProtection';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import CareersOverview from './pages/CareersOverview';
+import Careers from './pages/Careers';
+import Contact from './pages/Contact';
+import Team from './pages/Team';
+import Founder from './pages/Founder';
+import Webcam from './pages/Webcam';
+import TaxFreedom from './pages/TaxFreedom';
+import Apply from './pages/Apply';
+import Legal from './pages/Legal';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import FAQ from './pages/FAQ';
+import Blog from './pages/Blog';
+import Admin from './pages/Admin';
+
+function App() {
+  return (
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <ContentProtection />
+        <AgeVerification />
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/founder" element={<Founder />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/karriere" element={<CareersOverview />} />
+            <Route path="/onlyfans" element={<Careers />} />
+            <Route path="/webcam" element={<Webcam />} />
+            <Route path="/tax-freedom" element={<TaxFreedom />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/apply" element={<Apply />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/admin" element={<Admin />} />
+          </Routes>
+        </main>
+        <Footer />
+        <CookieBanner />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
