@@ -6,10 +6,13 @@ const ServiceCard = ({ title, description, icon, index }) => {
     <motion.div
       className="bg-[#2c3030] rounded-lg overflow-hidden"
       whileHover={{ scale: 1.02, backgroundColor: 'rgba(153, 123, 77, 0.1)' }}
-      transition={{ type: "spring", stiffness: 300 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 300,
+        delay: index * 0.1 
+      }}
     >
       <div className="p-8">
         <span className="text-4xl mb-6 block">{icon}</span>

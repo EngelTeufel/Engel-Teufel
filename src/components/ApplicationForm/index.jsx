@@ -32,7 +32,7 @@ const ApplicationForm = () => {
     if (name === 'birthDate') {
       const birthDate = new Date(value);
       const today = new Date();
-      const age = today.getFullYear() - birthDate.getFullYear();
+      let age = today.getFullYear() - birthDate.getFullYear();
       const monthDiff = today.getMonth() - birthDate.getMonth();
       
       // If birthday hasn't occurred this year, subtract a year
@@ -73,7 +73,7 @@ const ApplicationForm = () => {
     if (formData.birthDate) {
       const birthDate = new Date(formData.birthDate);
       const today = new Date();
-      const age = today.getFullYear() - birthDate.getFullYear();
+      let age = today.getFullYear() - birthDate.getFullYear();
       const monthDiff = today.getMonth() - birthDate.getMonth();
       
       if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
