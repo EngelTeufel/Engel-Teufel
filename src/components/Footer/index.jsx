@@ -60,7 +60,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex justify-center md:justify-start mb-8 md:mb-0">
             <img 
-              src="/images/footer/Logo ICON-02.png" 
+              src="/images/footer/Logo ICON-02.webp" 
               alt="Engel & Teufel Logo" 
               className="h-24 w-auto"
             />

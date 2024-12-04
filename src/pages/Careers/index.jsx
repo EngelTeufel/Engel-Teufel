@@ -1,106 +1,161 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import Hero from "../../components/Hero";
-import { heroImages } from "../../assets";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import Hero from '../../components/Hero';
+import { heroImages } from '../../assets';
 
-const Careers = () => {
+const CareersOverview = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
 
-  const creativeRoles = [
+  const features = [
     {
-      title: "Fotografie & Videografie",
-      description: "Du liebst es, einzigartige Momente einzufangen und professionelle Inhalte zu kreieren? Dann bist du bei uns genau richtig.",
-      icon: "📸",
+      icon: '',
+      title: 'Professionelle Unterstützung',
+      description: 'Von Fotoshootings bis zum Marketing - unser erfahrenes Team steht dir zur Seite und sorgt für deinen Erfolg.',
     },
     {
-      title: "Grafikdesign & Kreative Konzepte",
-      description: "Du verstehst es, visuelle Geschichten zu erzählen, und entwickelst Designs, die auffallen und begeistern.",
-      icon: "🎨",
+      icon: '',
+      title: 'Modernste Ausstattung',
+      description: 'Wir stellen dir hochwertige Technik zur Verfügung - von iPhones über MacBooks bis hin zu professionellem Equipment.',
     },
     {
-      title: "Social-Media-Strategie",
-      description: "Du kennst die neuesten Trends und weißt, wie man Reichweite und Engagement auf den Plattformen steigert.",
-      icon: "📱",
+      icon: '',
+      title: 'Rechtliche Sicherheit',
+      description: 'Mit unserem Rechtsteam bist du auf der sicheren Seite. Wir kümmern uns um Verträge und rechtliche Absicherung.',
+    },
+  ];
+
+  const positions = [
+    {
+      id: 'content-creator',
+      title: 'Content Creatorin (m/w/d)',
+      location: 'Europaweit',
+      type: 'Flexibel',
+      description: 'Erstelle einzigartigen Content für OnlyFans und Social Media. Baue deine eigene Community auf und generiere passives Einkommen.',
+      requirements: [
+        'Kreativität und Eigeninitiative',
+        'Interesse an Social Media',
+        'Zuverlässigkeit',
+      ],
     },
     {
-      title: "Content-Kreation",
-      description: "Deine Ideen machen aus einfachem Material unvergessliche Inhalte, die unsere Models und Partner nach vorne bringen.",
-      icon: "✨",
+      id: 'model',
+      title: 'OnlyFans Model (m/w/d)',
+      location: 'Europaweit',
+      type: 'Flexibel',
+      description: 'Werde Teil unseres erfolgreichen Model-Teams. Profitiere von professionellen Shootings und unserer Marketing-Expertise.',
+      requirements: [
+        'Offenheit für Foto- und Videoproduktionen',
+        'Zuverlässigkeit',
+        'Interesse an Social Media',
+      ],
+    },
+    {
+      id: 'webcam',
+      title: 'Webcam Model (m/w/d)',
+      location: 'Europaweit',
+      type: 'Flexibel',
+      description: 'Starte als Webcam Model und baue dir eine treue Fanbase auf. Wir unterstützen dich mit Equipment und Know-how.',
+      requirements: [
+        'Kommunikationsfreude',
+        'Zuverlässigkeit',
+        'Gute Internetverbindung',
+      ],
+    },
+    {
+      id: 'chatter',
+      title: 'Chat Model (m/w/d)',
+      location: 'Europaweit',
+      type: 'Flexibel',
+      description: 'Verdiene von überall als Chat Model. Perfekt geeignet als Nebenjob oder Haupteinnahmequelle.',
+      requirements: [
+        'Gute Schreibfähigkeiten',
+        'Kreativität',
+        'Zuverlässigkeit',
+      ],
     },
   ];
 
   const benefits = [
-    {
-      title: "Freiraum für Kreativität",
-      description: "Wir schätzen deine Ideen und geben dir die Freiheit, deine Projekte selbst zu gestalten.",
-      icon: "🎯",
-    },
-    {
-      title: "Modernes Equipment",
-      description: "Dir stehen die besten Tools und Technologien zur Verfügung.",
-      icon: "🎥",
-    },
-    {
-      title: "Inspirierendes Umfeld",
-      description: "Arbeite mit einem engagierten Team zusammen, das sich gegenseitig unterstützt.",
-      icon: "🤝",
-    },
-    {
-      title: "Vielfältige Projekte",
-      description: "Kein Tag ist wie der andere – bei uns kannst du an einer Vielzahl von spannenden Aufgaben arbeiten.",
-      icon: "🎪",
-    },
+    'Überdurchschnittliche Verdienstmöglichkeiten',
+    'Flexible Arbeitszeiten & Orte',
+    'Persönliches Coaching & Mentoring',
+    'Regelmäßige Content-Produktionen',
+    'Marketing & Social Media Support',
+    'Internationale Karrieremöglichkeiten',
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-dark">
       <Hero
-        title="Kreative Köpfe gesucht"
-        subtitle="Gestalte mit uns die Zukunft der Content-Kreation"
+        title="Karriere"
+        subtitle="Deine Zukunft beginnt hier"
         imageSrc={heroImages.careers}
       />
 
-      {/* Intro Section */}
+      {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl mb-8 text-cream font-inknut font-bold">
-              Das Herz unserer Arbeit
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
+              Warum Engel & Teufel?
             </h2>
-            <p className="text-lg mb-8 text-cream/80">
-              Engel & Teufel wäre nichts ohne die kreativen Köpfe, die unsere Visionen zum Leben erwecken. 
-              Egal, ob du Fotograf:in, Videograf:in, Designer:in oder Social-Media-Expert:in bist – bei uns 
-              findest du den perfekten Ort, um deiner Kreativität freien Lauf zu lassen.
-            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                >
+                  <div className="text-3xl mb-4 text-gold">{feature.icon}</div>
+                  <h3 className="text-xl text-cream mb-2 font-semibold">{feature.title}</h3>
+                  <p className="text-cream/80">{feature.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Creative Roles Section */}
+      {/* Positions Section */}
       <section className="py-20 bg-gold/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut font-bold">
-              Was wir suchen
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
+              Offene Positionen
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {creativeRoles.map((role, index) => (
-                <motion.div
+            <div className="space-y-6">
+              {positions.map((position, index) => (
+                <div
                   key={index}
-                  variants={fadeIn}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
                   className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
                 >
-                  <div className="text-4xl mb-4">{role.icon}</div>
-                  <h3 className="text-xl text-cream mb-2 font-semibold">{role.title}</h3>
-                  <p className="text-cream/80">{role.description}</p>
-                </motion.div>
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-xl text-cream mb-1 font-semibold">{position.title}</h3>
+                      <p className="text-cream/60 text-sm">{position.location} • {position.type}</p>
+                    </div>
+                    <Link
+                      to={`/apply?position=${position.id}`}
+                      className="bg-gold hover:bg-gold/90 text-dark px-6 py-2 rounded-full transition-colors font-semibold"
+                    >
+                      Bewerben
+                    </Link>
+                  </div>
+                  <p className="text-cream/80 mb-4">{position.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {position.requirements.map((req, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-dark/40 text-cream/60 px-3 py-1 rounded-full text-sm"
+                      >
+                        {req}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -110,24 +165,19 @@ const Careers = () => {
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut font-bold">
-              Warum bei Engel & Teufel arbeiten?
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
+              Deine Vorteile
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={fadeIn}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                  className="flex items-center bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
                 >
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl text-cream mb-2 font-semibold">{benefit.title}</h3>
-                  <p className="text-cream/80">{benefit.description}</p>
-                </motion.div>
+                  <span className="text-gold text-xl mr-4">✓</span>
+                  <span className="text-cream font-semibold">{benefit}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -138,27 +188,18 @@ const Careers = () => {
       <section className="py-20 bg-gold/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl mb-8 text-cream font-inknut font-bold">
-              Werde Teil von Engel & Teufel
+            <h2 className="text-3xl md:text-4xl mb-6 text-cream font-inknut">
+              Bereit für den nächsten Schritt?
             </h2>
-            <p className="text-lg mb-8 text-cream/80">
-              Lass uns gemeinsam kreativ Großes schaffen. Wir suchen Menschen mit Leidenschaft, 
-              die unsere Vision teilen und mit ihren einzigartigen Fähigkeiten bereichern.
+            <p className="text-lg mb-8 text-cream/80 italic">
+              Wir freuen uns darauf, dich kennenzulernen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/apply"
-                className="inline-block bg-gold hover:bg-gold/90 text-dark px-8 py-3 rounded-full transition-colors font-semibold"
-              >
-                Jetzt bewerben
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-block border border-gold text-gold hover:bg-gold/10 px-8 py-3 rounded-full transition-colors font-semibold"
-              >
-                Mehr erfahren
-              </Link>
-            </div>
+            <Link
+              to="/apply"
+              className="inline-block bg-gold hover:bg-gold/90 text-dark px-8 py-3 rounded-full transition-colors font-semibold"
+            >
+              Jetzt bewerben
+            </Link>
           </div>
         </div>
       </section>
@@ -166,4 +207,4 @@ const Careers = () => {
   );
 };
 
-export default Careers;
+export default CareersOverview;

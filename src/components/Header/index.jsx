@@ -44,24 +44,55 @@ const Header = () => {
     { 
       label: 'Dienstleistungen',
       path: '/services',
+      hasMainPage: true,
       submenu: [
-        { path: '/webcam', label: 'Webcam' },
         { path: '/onlyfans', label: 'OnlyFans' },
-        { path: '/tax-freedom', label: 'Steuerfrei Leben' }
+        { path: '/webcam', label: 'Webcam' },
+        { path: '/tax-freedom', label: 'Steuerfreies Leben' }
       ]
     },
-    { 
+    {
       label: 'Unternehmen',
+      path: '/company',
       submenu: [
         { path: '/founder', label: 'Gründer' },
         { path: '/team', label: 'Team' }
       ]
     },
-    { path: '/karriere', label: 'Karriere' },
+    {
+      label: 'Karriere',
+      path: '/careers',
+      hasMainPage: true,
+      submenu: [
+        { path: '/freelancer', label: 'Freelancer' }
+      ]
+    },
     { path: '/blog', label: 'Blog' },
     { path: '/faq', label: 'FAQ' },
     { path: '/contact', label: 'Kontakt' }
   ];
+
+  const renderSubmenu = (submenu) => (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      className="submenu absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-[#2c3030] ring-1 ring-black ring-opacity-5 z-50"
+    >
+      <div className="py-1">
+        {submenu.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className="block px-4 py-2 text-sm text-cream/80 hover:bg-[#3c4040] hover:text-gold"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
+    </motion.div>
+  );
 
   return (
     <header 
@@ -74,7 +105,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="relative z-50 flex items-center">
             <img 
-              src={isScrolled ? '/images/header/Logo-Gold.png' : '/images/header/Logo-White.png'} 
+              src={isScrolled ? '/images/header/Logo-Gold.webp' : '/images/header/Logo-White.webp'} 
               alt="Engel & Teufel Logo" 
               className="h-12 w-auto transition-opacity duration-300"
             />
@@ -98,10 +129,25 @@ const Header = () => {
               <div
                 key={item.label}
                 className="relative submenu-parent"
-                onMouseEnter={() => handleMouseEnter(item.label)}
+                onMouseEnter={() => item.submenu && handleMouseEnter(item.label)}
                 onMouseLeave={handleMouseLeave}
               >
-                {item.path ? (
+                {item.submenu ? (
+                  <div className="submenu-container">
+                    <Link
+                      to={item.path}
+                      className={`relative overflow-hidden group ${
+                        location.pathname === item.path ? 'text-gold' : 'text-cream/80'
+                      }`}
+                    >
+                      {item.label}
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gold transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+                    </Link>
+                    <AnimatePresence>
+                      {activeSubmenu === item.label && renderSubmenu(item.submenu)}
+                    </AnimatePresence>
+                  </div>
+                ) : (
                   <Link
                     to={item.path}
                     className={`relative overflow-hidden group ${
@@ -111,53 +157,7 @@ const Header = () => {
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gold transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
                   </Link>
-                ) : (
-                  <button
-                    className="text-cream/80 hover:text-gold transition-colors flex items-center gap-1"
-                  >
-                    {item.label}
-                    <svg
-                      className={`w-4 h-4 transform transition-transform ${
-                        activeSubmenu === item.label ? 'rotate-180' : ''
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
                 )}
-
-                {/* Submenu */}
-                <AnimatePresence>
-                  {item.submenu && activeSubmenu === item.label && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="submenu-container absolute top-full left-0 mt-2 py-2 min-w-[200px] glass-effect rounded-lg shadow-xl"
-                      onMouseEnter={() => handleMouseEnter(item.label)}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.path}
-                          to={subItem.path}
-                          className="block px-4 py-2 text-cream/80 hover:text-gold transition-colors hover:bg-cream/5"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </div>
             ))}
             <Link
