@@ -8,7 +8,6 @@ import ContentProtection from './components/ContentProtection';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import CareersOverview from './pages/CareersOverview';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
@@ -37,7 +36,7 @@ function App() {
             <Route path="/founder" element={<Founder />} />
             <Route path="/team" element={<Team />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/karriere" element={<CareersOverview />} />
+            <Route path="/karriere" element={<Careers />} />
             <Route path="/onlyfans" element={<Careers />} />
             <Route path="/webcam" element={<Webcam />} />
             <Route path="/tax-freedom" element={<TaxFreedom />} />
