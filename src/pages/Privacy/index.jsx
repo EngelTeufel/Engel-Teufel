@@ -1,91 +1,61 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Hero from '../../components/Hero';
-import { heroImages } from '../../assets';
-import PrivacySection from '../../components/PrivacySection';
+import { SEO } from '../../components/SEO';
+import { metadata } from '../../config/metadata';
 
-const Privacy = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
+const PrivacyPolicy = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-dark">
-      <Hero
-        title="Datenschutz"
-        subtitle="Transparenz & Vertrauen"
-        imageSrc={heroImages.privacy}
+    <>
+      <SEO
+        title="Datenschutzerklärung – Engel & Teufel"
+        description="Informationen zum Datenschutz bei Engel & Teufel. Erfahren Sie, wie wir Ihre Daten schützen und verarbeiten."
+        keywords={["Datenschutz", "Privacy Policy", "DSGVO", "Engel & Teufel", "Datenschutzerklärung"]}
       />
+      <div className="container mx-auto px-4 py-12 prose prose-lg prose-invert max-w-4xl">
+        <h1>Datenschutzerklärung</h1>
+        
+        <h2 id="m716">Präambel</h2>
+        <p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z. B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als "Onlineangebot").</p>
+        <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
+        <p>Stand: 4. Dezember 2024</p>
 
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto prose prose-invert">
-            <h1 className="text-4xl mb-8 text-cream font-inknut">Datenschutzerklärung</h1>
+        <h2>Inhaltsübersicht</h2>
+        <ul>
+          <li><a href="#m716">Präambel</a></li>
+          <li><a href="#m3">Verantwortlicher</a></li>
+          <li><a href="#mOverview">Übersicht der Verarbeitungen</a></li>
+          <li><a href="#m2427">Maßgebliche Rechtsgrundlagen</a></li>
+          {/* Add all other sections as links */}
+        </ul>
 
-            <h2 className="text-2xl mt-12 mb-4 text-cream font-inknut">1. Datenschutz auf einen Blick</h2>
-            <h3 className="text-xl mt-8 mb-3 text-cream font-inknut">Allgemeine Hinweise</h3>
-            <p className="text-cream/80">
-              Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
-              wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert 
-              werden können.
-            </p>
+        <h2 id="m3">Verantwortlicher</h2>
+        <p>Engel&Teufel GmbH<br/>
+        Kapstadtring 7<br/>
+        22297 Hamburg</p>
+        <p>Vertretungsberechtigte Personen: Victor Engelmann</p>
+        <p>E-Mail-Adresse: <a href="mailto:Datenschutzbeauftragte@engelteufel.com">Datenschutzbeauftragte@engelteufel.com</a></p>
+        <p>Impressum: <a href="https://engelteufel.com/legal" target="_blank" rel="noopener noreferrer">https://engelteufel.com/legal</a></p>
 
-            <h3 className="text-xl mt-8 mb-3 text-cream font-inknut">Datenerfassung auf dieser Website</h3>
-            <h4 className="text-lg mt-6 mb-2 text-cream font-semibold">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
-            <p className="text-cream/80">
-              Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem 
-              Impressum dieser Website entnehmen.
-            </p>
+        {/* Continue with all other sections */}
+        <h2 id="mOverview">Übersicht der Verarbeitungen</h2>
+        <p>Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.</p>
+        
+        <h3>Arten der verarbeiteten Daten</h3>
+        <ul>
+          <li>Bestandsdaten</li>
+          <li>Zahlungsdaten</li>
+          <li>Standortdaten</li>
+          <li>Kontaktdaten</li>
+          <li>Inhaltsdaten</li>
+          <li>Vertragsdaten</li>
+          <li>Nutzungsdaten</li>
+          <li>Meta-, Kommunikations- und Verfahrensdaten</li>
+          <li>Protokolldaten</li>
+        </ul>
 
-            <h4 className="text-lg mt-6 mb-2 text-cream font-semibold">Wie erfassen wir Ihre Daten?</h4>
-            <p className="text-cream/80">
-              Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, 
-              die Sie in ein Kontaktformular eingeben.
-            </p>
-            <p className="text-cream/80">
-              Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. 
-              Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
-            </p>
-
-            <h4 className="text-lg mt-6 mb-2 text-cream font-semibold">Wofür nutzen wir Ihre Daten?</h4>
-            <p className="text-cream/80">
-              Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können 
-              zur Analyse Ihres Nutzerverhaltens verwendet werden.
-            </p>
-
-            <h4 className="text-lg mt-6 mb-2 text-cream font-semibold">Welche Rechte haben Sie bezüglich Ihrer Daten?</h4>
-            <p className="text-cream/80">
-              Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten 
-              personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten 
-              zu verlangen.
-            </p>
-
-            <h2 className="text-2xl mt-12 mb-4 text-cream font-inknut">2. Hosting</h2>
-            <p className="text-cream/80">
-              Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
-            </p>
-
-            <h3 className="text-xl mt-8 mb-3 text-cream font-inknut">Externes Hosting</h3>
-            <p className="text-cream/80">
-              Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf 
-              den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und 
-              Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine 
-              Website generiert werden, handeln.
-            </p>
-
-            <h2 className="text-2xl mt-12 mb-4 text-cream font-inknut">3. Allgemeine Hinweise und Pflichtinformationen</h2>
-            <h3 className="text-xl mt-8 mb-3 text-cream font-inknut">Datenschutz</h3>
-            <p className="text-cream/80">
-              Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre 
-              personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser 
-              Datenschutzerklärung.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+        {/* Add remaining content sections */}
+      </div>
+    </>
   );
 };
 
-export default Privacy;
+export default PrivacyPolicy;

@@ -169,54 +169,66 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          <motion.div
-            initial={false}
-            animate={isMenuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: "100%" }}
-            className={`fixed inset-0 glass-effect lg:hidden ${
-              isMenuOpen ? 'visible' : 'invisible'
-            }`}
-          >
-            <div className="flex flex-col items-center justify-center h-full space-y-6">
-              {navItems.map((item) => (
-                <div key={item.label} className="text-center">
-                  {item.path ? (
-                    <Link
-                      to={item.path}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`text-xl ${
-                        location.pathname === item.path ? 'text-gold' : 'text-cream/80'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <>
-                      <div className="text-xl text-gold mb-2">{item.label}</div>
-                      <div className="flex flex-col space-y-2">
-                        {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.path}
-                            to={subItem.path}
-                            onClick={() => setIsMenuOpen(false)}
-                            className="text-cream/80 hover:text-gold"
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </>
-                  )}
-                </div>
-              ))}
-              <Link
-                to="/apply"
-                onClick={() => setIsMenuOpen(false)}
-                className="button-primary mt-4"
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, x: '100%' }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: '100%' }}
+                transition={{ type: 'tween' }}
+                className="fixed inset-0 lg:hidden bg-brand-dark/95 backdrop-blur-md"
               >
-                Jetzt Bewerben
-              </Link>
-            </div>
-          </motion.div>
+                <div className="h-full flex flex-col pt-24 px-6 overflow-y-auto">
+                  {navItems.map((item) => (
+                    <div key={item.label} className="py-2">
+                      {item.submenu ? (
+                        <>
+                          <button
+                            onClick={() => setActiveSubmenu(activeSubmenu === item.label ? null : item.label)}
+                            className="w-full text-left text-xl font-medium text-white hover:text-gold py-2 flex justify-between items-center"
+                          >
+                            {item.label}
+                            <span className={`transform transition-transform duration-200 ${activeSubmenu === item.label ? 'rotate-180' : ''}`}>
+                              ▼
+                            </span>
+                          </button>
+                          <AnimatePresence>
+                            {activeSubmenu === item.label && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                className="pl-4 space-y-2 bg-brand-dark/50 rounded-lg mt-2"
+                              >
+                                {item.submenu.map((subItem) => (
+                                  <Link
+                                    key={subItem.label}
+                                    to={subItem.path}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="block py-2 text-white hover:text-gold"
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block text-xl font-medium text-white hover:text-gold py-2"
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </nav>
       </div>
     </header>
