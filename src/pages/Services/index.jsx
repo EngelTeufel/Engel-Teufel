@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Hero from '../../components/Hero';
 import { heroImages } from '../../assets';
 import ServiceCard from '../../components/ServiceCard';
+import { Helmet } from 'react-helmet';
 
 const Services = () => {
   const fadeIn = {
@@ -93,101 +94,113 @@ const Services = () => {
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="flex-grow">
-        <Hero
-          title="Unsere Services"
-          subtitle="Entdecke unsere umfassenden Dienstleistungen"
-          imageSrc={heroImages.services}
-        />
+    <>
+      <Helmet>
+        <title>Services & Leistungen | Engel & Teufel</title>
+        <meta name="description" content="Entdecken Sie unsere umfassenden Services für OnlyFans, Webcam und Adult Content Creation. Professionelle Betreuung und Unterstützung für Ihren Erfolg." />
+        <meta name="keywords" content="OnlyFans Management, Webcam Services, Content Creation, Adult Industry, Model Management, Marketing Services" />
+        <meta property="og:title" content="Services & Leistungen | Engel & Teufel" />
+        <meta property="og:description" content="Professionelle Services für OnlyFans, Webcam und Adult Content Creation. Ihr Partner für nachhaltigen Erfolg." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.engelteufel.com/services" />
+        <link rel="canonical" href="https://www.engelteufel.com/services" />
+      </Helmet>
+      <div className="flex flex-col min-h-screen">
+        <div className="flex-grow">
+          <Hero
+            title="Unsere Services"
+            subtitle="Entdecke unsere umfassenden Dienstleistungen"
+            imageSrc={heroImages.services}
+          />
 
-        {/* Overview Section */}
-        <section className="relative py-20 bg-gradient-to-b from-dark to-dark/95">
-          <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
-          <div className="container relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 text-cream">Was wir bieten</h2>
-              <p className="text-lg text-cream/90 max-w-3xl mx-auto">
-                Von der Beratung bis zur Umsetzung - wir unterstützen dich in allen Bereichen
-                deiner Content-Creator-Karriere.
-              </p>
+          {/* Overview Section */}
+          <section className="relative py-20 bg-gradient-to-b from-dark to-dark/95">
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
+            <div className="container relative z-10">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl mb-6 text-cream">Was wir bieten</h2>
+                <p className="text-lg text-cream/90 max-w-3xl mx-auto">
+                  Von der Beratung bis zur Umsetzung - wir unterstützen dich in allen Bereichen
+                  deiner Content-Creator-Karriere.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Services Grid */}
-        <section className="relative py-20 bg-gradient-to-b from-dark/95 to-dark">
-          <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-transparent" />
-          <div className="container relative z-10">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-dark/50 backdrop-blur-sm p-8 rounded-lg border border-gold/20"
-                  variants={fadeIn}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
-                >
-                  <div className="text-gold text-3xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl text-cream mb-4">{service.title}</h3>
-                  <p className="text-cream/80 mb-6">{service.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="relative py-20 bg-gradient-to-b from-dark to-dark/95">
-          <div className="absolute inset-0 bg-gradient-to-bl from-gold/5 via-transparent to-transparent" />
-          <div className="container relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl mb-6 text-cream">Deine Vorteile</h2>
+          {/* Services Grid */}
+          <section className="relative py-20 bg-gradient-to-b from-dark/95 to-dark">
+            <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-transparent" />
+            <div className="container relative z-10">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {benefits.map((benefit, index) => (
+                {services.map((service, index) => (
                   <motion.div
                     key={index}
-                    className="bg-dark/50 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                    className="bg-dark/50 backdrop-blur-sm p-8 rounded-lg border border-gold/20"
                     variants={fadeIn}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.2 }}
                   >
-                    <div className="text-gold text-2xl mb-3">{benefit.icon}</div>
-                    <h3 className="text-lg text-cream mb-2">{benefit.title}</h3>
-                    <p className="text-cream/80">{benefit.description}</p>
+                    <div className="text-gold text-3xl mb-4">{service.icon}</div>
+                    <h3 className="text-xl text-cream mb-4">{service.title}</h3>
+                    <p className="text-cream/80 mb-6">{service.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* CTA Section */}
-        <section className="relative py-20 bg-gradient-to-b from-dark/95 to-dark">
-          <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-transparent" />
-          <div className="container relative z-10 text-center">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl mb-6 text-cream">
-                Bereit für den nächsten Schritt?
-              </h2>
-              <p className="text-lg mb-8 text-cream/90">
-                Lass uns gemeinsam deine Karriere auf das nächste Level bringen.
-              </p>
-              <Link
-                to="/contact"
-                className="bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-3 rounded-full transition-all"
-              >
-                👉 Jetzt loslegen
-              </Link>
+          {/* Benefits Section */}
+          <section className="relative py-20 bg-gradient-to-b from-dark to-dark/95">
+            <div className="absolute inset-0 bg-gradient-to-bl from-gold/5 via-transparent to-transparent" />
+            <div className="container relative z-10">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl mb-6 text-cream">Deine Vorteile</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {benefits.map((benefit, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-dark/50 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                      variants={fadeIn}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.2 }}
+                    >
+                      <div className="text-gold text-2xl mb-3">{benefit.icon}</div>
+                      <h3 className="text-lg text-cream mb-2">{benefit.title}</h3>
+                      <p className="text-cream/80">{benefit.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          {/* CTA Section */}
+          <section className="relative py-20 bg-gradient-to-b from-dark/95 to-dark">
+            <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-transparent" />
+            <div className="container relative z-10 text-center">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl md:text-4xl mb-6 text-cream">
+                  Bereit für den nächsten Schritt?
+                </h2>
+                <p className="text-lg mb-8 text-cream/90">
+                  Lass uns gemeinsam deine Karriere auf das nächste Level bringen.
+                </p>
+                <Link
+                  to="/contact"
+                  className="bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-3 rounded-full transition-all"
+                >
+                  👉 Jetzt loslegen
+                </Link>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

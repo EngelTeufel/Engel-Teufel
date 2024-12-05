@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import FAQAccordion from '../../components/FAQAccordion';
 import Hero from '../../components/Hero';
 import { heroImages } from '../../assets';
+import { Helmet } from 'react-helmet';
 
 const FAQ = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -126,147 +127,159 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Hero
-        title="FAQ"
-        subtitle="Häufig gestellte Fragen"
-        imageSrc={heroImages.contact}
-      />
-      {/* Hero Section */}
-      <motion.section
-        className="section bg-gradient-to-b from-dark to-[#2c3030]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="container">
-          <h1 className="text-4xl md:text-6xl font-serif text-center mb-6">
-            Häufig gestellte Fragen
-          </h1>
-          <p className="text-xl md:text-2xl text-center text-cream/80 max-w-3xl mx-auto">
-            Hier findest du Antworten auf die wichtigsten Fragen
-          </p>
-        </div>
-      </motion.section>
-
-      {/* FAQ Section */}
-      <section className="section">
-        <div className="container max-w-4xl">
-          {/* Category Filter with Arrows */}
-          <motion.div
-            className="mb-12 relative"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            {/* Left Arrow */}
-            <button
-              onClick={() => scrollCategories('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-dark/80 hover:bg-dark rounded-full shadow-lg text-gold hover:text-gold/80 transition-colors"
-              aria-label="Scroll left"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-
-            {/* Categories Slider */}
-            <div
-              ref={sliderRef}
-              className="overflow-x-auto scrollbar-hide mx-10"
-            >
-              <div className="flex space-x-4 min-w-max pb-4">
-                {categories.map((category) => (
-                  <motion.button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors ${
-                      activeCategory === category.id
-                        ? 'bg-gold text-dark'
-                        : 'bg-[#2c3030] hover:bg-[#3c4040]'
-                    }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <span>{category.icon}</span>
-                    <span>{category.name}</span>
-                  </motion.button>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Arrow */}
-            <button
-              onClick={() => scrollCategories('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-dark/80 hover:bg-dark rounded-full shadow-lg text-gold hover:text-gold/80 transition-colors"
-              aria-label="Scroll right"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </motion.div>
-
-          {/* FAQ Accordion */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <FAQAccordion faqs={faqs} category={activeCategory} />
-          </motion.div>
-
-          {/* Contact Section */}
-          <motion.div
-            className="mt-12 pt-12 border-t border-gray-700 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <h2 className="text-2xl font-serif mb-4">Hast du weitere Fragen?</h2>
-            <p className="text-cream/70 mb-6">
-              Kontaktiere uns gerne über unser Kontaktformular oder per E-Mail an{' '}
-              <a href="mailto:info@engelteufel.com" className="text-gold hover:text-gold/80 transition-colors">
-                info@engelteufel.com
-              </a>
-              . Wir freuen uns darauf, dir weiterzuhelfen!
+    <>
+      <Helmet>
+        <title>FAQ - Häufig gestellte Fragen | Engel & Teufel</title>
+        <meta name="description" content="Finden Sie Antworten auf häufig gestellte Fragen zu OnlyFans, Webcam Modeling und unseren Services. Alle wichtigen Informationen für Models bei Engel & Teufel." />
+        <meta name="keywords" content="FAQ, Häufige Fragen, OnlyFans FAQ, Webcam Model FAQ, Engel und Teufel FAQ, Adult Content FAQ" />
+        <meta property="og:title" content="FAQ - Häufig gestellte Fragen | Engel & Teufel" />
+        <meta property="og:description" content="Alle wichtigen Informationen und Antworten auf häufig gestellte Fragen zu unseren Services bei Engel & Teufel." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.engelteufel.com/faq" />
+        <link rel="canonical" href="https://www.engelteufel.com/faq" />
+      </Helmet>
+      <div className="flex flex-col min-h-screen">
+        <Hero
+          title="FAQ"
+          subtitle="Häufig gestellte Fragen"
+          imageSrc={heroImages.contact}
+        />
+        {/* Hero Section */}
+        <motion.section
+          className="section bg-gradient-to-b from-dark to-[#2c3030]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className="container">
+            <h1 className="text-4xl md:text-6xl font-serif text-center mb-6">
+              Häufig gestellte Fragen
+            </h1>
+            <p className="text-xl md:text-2xl text-center text-cream/80 max-w-3xl mx-auto">
+              Hier findest du Antworten auf die wichtigsten Fragen
             </p>
+          </div>
+        </motion.section>
+
+        {/* FAQ Section */}
+        <section className="section">
+          <div className="container max-w-4xl">
+            {/* Category Filter with Arrows */}
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="mb-12 relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gold text-dark font-medium rounded-lg hover:bg-gold/90 transition-colors"
+              {/* Left Arrow */}
+              <button
+                onClick={() => scrollCategories('left')}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-dark/80 hover:bg-dark rounded-full shadow-lg text-gold hover:text-gold/80 transition-colors"
+                aria-label="Scroll left"
               >
-                Kontaktiere uns
-              </Link>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Categories Slider */}
+              <div
+                ref={sliderRef}
+                className="overflow-x-auto scrollbar-hide mx-10"
+              >
+                <div className="flex space-x-4 min-w-max pb-4">
+                  {categories.map((category) => (
+                    <motion.button
+                      key={category.id}
+                      onClick={() => setActiveCategory(category.id)}
+                      className={`px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors ${
+                        activeCategory === category.id
+                          ? 'bg-gold text-dark'
+                          : 'bg-[#2c3030] hover:bg-[#3c4040]'
+                      }`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <span>{category.icon}</span>
+                      <span>{category.name}</span>
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => scrollCategories('right')}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-dark/80 hover:bg-dark rounded-full shadow-lg text-gold hover:text-gold/80 transition-colors"
+                aria-label="Scroll right"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+
+            {/* FAQ Accordion */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <FAQAccordion faqs={faqs} category={activeCategory} />
+            </motion.div>
+
+            {/* Contact Section */}
+            <motion.div
+              className="mt-12 pt-12 border-t border-gray-700 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              <h2 className="text-2xl font-serif mb-4">Hast du weitere Fragen?</h2>
+              <p className="text-cream/70 mb-6">
+                Kontaktiere uns gerne über unser Kontaktformular oder per E-Mail an{' '}
+                <a href="mailto:info@engelteufel.com" className="text-gold hover:text-gold/80 transition-colors">
+                  info@engelteufel.com
+                </a>
+                . Wir freuen uns darauf, dir weiterzuhelfen!
+              </p>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-gold text-dark font-medium rounded-lg hover:bg-gold/90 transition-colors"
+                >
+                  Kontaktiere uns
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

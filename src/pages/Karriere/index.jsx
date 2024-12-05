@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Hero from '../../components/Hero';
 import { heroImages } from '../../assets';
@@ -89,121 +90,133 @@ const Karriere = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-dark">
-      <Hero
-        title="Karriere"
-        subtitle="Deine Zukunft beginnt hier"
-        imageSrc={heroImages.careers}
-      />
+    <>
+      <Helmet>
+        <title>Karriere & Jobs | Engel & Teufel</title>
+        <meta name="description" content="Starten Sie Ihre Karriere bei Engel & Teufel. Entdecken Sie spannende Jobmöglichkeiten im Bereich OnlyFans, Webcam und Adult Content Creation." />
+        <meta name="keywords" content="Karriere, Jobs, OnlyFans Model, Webcam Model, Content Creator, Adult Industry Jobs, Model Jobs" />
+        <meta property="og:title" content="Karriere & Jobs | Engel & Teufel" />
+        <meta property="og:description" content="Ihre Karriere bei Engel & Teufel - Entdecken Sie vielfältige Möglichkeiten im Bereich Adult Content Creation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.engelteufel.com/karriere" />
+        <link rel="canonical" href="https://www.engelteufel.com/karriere" />
+      </Helmet>
+      <div className="flex flex-col min-h-screen bg-dark">
+        <Hero
+          title="Karriere"
+          subtitle="Deine Zukunft beginnt hier"
+          imageSrc={heroImages.careers}
+        />
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
-              Warum Engel & Teufel?
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
-                >
-                  <div className="text-3xl mb-4 text-gold">{feature.icon}</div>
-                  <h3 className="text-xl text-cream mb-2 font-semibold">{feature.title}</h3>
-                  <p className="text-cream/80">{feature.description}</p>
-                </div>
-              ))}
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
+                Warum Engel & Teufel?
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                  >
+                    <div className="text-3xl mb-4 text-gold">{feature.icon}</div>
+                    <h3 className="text-xl text-cream mb-2 font-semibold">{feature.title}</h3>
+                    <p className="text-cream/80">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Positions Section */}
-      <section className="py-20 bg-gold/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
-              Offene Positionen
-            </h2>
-            <div className="space-y-6">
-              {positions.map((position, index) => (
-                <div
-                  key={index}
-                  className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h3 className="text-xl text-cream mb-1 font-semibold">{position.title}</h3>
-                      <p className="text-cream/60 text-sm">{position.location} • {position.type}</p>
-                    </div>
-                    <Link
-                      to={`/apply?position=${position.id}`}
-                      className="bg-gold hover:bg-gold/90 text-dark px-6 py-2 rounded-full transition-colors font-semibold"
-                    >
-                      Bewerben
-                    </Link>
-                  </div>
-                  <p className="text-cream/80 mb-4">{position.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {position.requirements.map((req, idx) => (
-                      <span
-                        key={idx}
-                        className="bg-dark/40 text-cream/60 px-3 py-1 rounded-full text-sm"
+        {/* Positions Section */}
+        <section className="py-20 bg-gold/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
+                Offene Positionen
+              </h2>
+              <div className="space-y-6">
+                {positions.map((position, index) => (
+                  <div
+                    key={index}
+                    className="bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                  >
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-xl text-cream mb-1 font-semibold">{position.title}</h3>
+                        <p className="text-cream/60 text-sm">{position.location} • {position.type}</p>
+                      </div>
+                      <Link
+                        to={`/apply?position=${position.id}`}
+                        className="bg-gold hover:bg-gold/90 text-dark px-6 py-2 rounded-full transition-colors font-semibold"
                       >
-                        {req}
-                      </span>
-                    ))}
+                        Bewerben
+                      </Link>
+                    </div>
+                    <p className="text-cream/80 mb-4">{position.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {position.requirements.map((req, idx) => (
+                        <span
+                          key={idx}
+                          className="bg-dark/40 text-cream/60 px-3 py-1 rounded-full text-sm"
+                        >
+                          {req}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
-              Deine Vorteile
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex items-center bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
-                >
-                  <span className="text-gold text-xl mr-4">✓</span>
-                  <span className="text-cream font-semibold">{benefit}</span>
-                </div>
-              ))}
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl mb-12 text-cream text-center font-inknut">
+                Deine Vorteile
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center bg-dark/60 backdrop-blur-sm p-6 rounded-lg border border-gold/20"
+                  >
+                    <span className="text-gold text-xl mr-4">✓</span>
+                    <span className="text-cream font-semibold">{benefit}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gold/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl mb-6 text-cream font-inknut">
-              Bereit für den nächsten Schritt?
-            </h2>
-            <p className="text-lg mb-8 text-cream/80 italic">
-              Wir freuen uns darauf, dich kennenzulernen.
-            </p>
-            <Link
-              to="/apply"
-              className="inline-block bg-gold hover:bg-gold/90 text-dark px-8 py-3 rounded-full transition-colors font-semibold"
-            >
-              Jetzt bewerben
-            </Link>
+        {/* CTA Section */}
+        <section className="py-20 bg-gold/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl mb-6 text-cream font-inknut">
+                Bereit für den nächsten Schritt?
+              </h2>
+              <p className="text-lg mb-8 text-cream/80 italic">
+                Wir freuen uns darauf, dich kennenzulernen.
+              </p>
+              <Link
+                to="/apply"
+                className="inline-block bg-gold hover:bg-gold/90 text-dark px-8 py-3 rounded-full transition-colors font-semibold"
+              >
+                Jetzt bewerben
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import BenefitCard from '../../components/BenefitCard';
@@ -86,114 +87,126 @@ const Onlyfans = () => {
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <Hero
-        title="Werde OnlyFans-Model mit Engel & Teufel"
-        subtitle="Starte deine Karriere auf OnlyFans – mit einem starken Partner an deiner Seite!"
-        imageSrc={heroImages.onlyfans}
-      />
+    <>
+      <Helmet>
+        <title>OnlyFans Management & Beratung | Engel & Teufel</title>
+        <meta name="description" content="Professionelles OnlyFans Management und Beratung von Engel & Teufel. Maximiere deinen Erfolg auf OnlyFans mit unserer Expertise und Unterstützung." />
+        <meta name="keywords" content="OnlyFans Management, OnlyFans Beratung, Content Creator, Engel und Teufel, Adult Content, OnlyFans Erfolg" />
+        <meta property="og:title" content="OnlyFans Management & Beratung | Engel & Teufel" />
+        <meta property="og:description" content="Professionelle Unterstützung für deinen OnlyFans-Erfolg. Maximiere dein Potenzial mit unserem erfahrenen Management-Team." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.engelteufel.com/onlyfans" />
+        <link rel="canonical" href="https://www.engelteufel.com/onlyfans" />
+      </Helmet>
+      <div className="flex flex-col min-h-screen">
+        {/* Hero Section */}
+        <Hero
+          title="Werde OnlyFans-Model mit Engel & Teufel"
+          subtitle="Starte deine Karriere auf OnlyFans – mit einem starken Partner an deiner Seite!"
+          imageSrc={heroImages.onlyfans}
+        />
 
-      {/* Introduction Section */}
-      <section className="section" ref={introRef}>
-        <div className="container max-w-4xl">
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            animate={introInView ? "visible" : "hidden"}
-            className="text-center"
-          >
-            <p className="text-lg leading-relaxed mb-12">
-              Engel & Teufel unterstützt dich dabei, auf der weltweit führenden Plattform erfolgreich zu sein. 
-              Ob du bereits Erfahrung hast oder ganz neu durchstarten möchtest – wir bieten dir alles, was du für eine erfolgreiche und nachhaltige Karriere brauchst.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="section bg-[#2c3030]" ref={benefitsRef}>
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Deine Vorteile bei Engel & Teufel
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <BenefitCard key={index} {...benefit} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="section" ref={processRef}>
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Wie läuft die Zusammenarbeit ab?
-          </h2>
-          <div className="space-y-12">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                variants={fadeIn}
-                initial="hidden"
-                animate={processInView ? "visible" : "hidden"}
-                transition={{ delay: index * 0.2 }}
-              >
-                <ProcessStep {...step} number={index + 1} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section className="section bg-[#2c3030]" ref={whyUsRef}>
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Warum Engel & Teufel?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {whyUs.map((item, index) => (
-              <WhyUsCard key={index} {...item} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section" ref={ctaRef}>
-        <div className="container max-w-4xl">
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            animate={ctaInView ? "visible" : "hidden"}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-serif mb-6">
-              Bist du bereit, durchzustarten?
-            </h2>
-            <p className="text-lg mb-8">
-              Engel & Teufel bietet dir die Chance, mit OnlyFans ein solides Einkommen zu erzielen und deine Ziele zu erreichen. 
-              Mit unserer Erfahrung und deinem Engagement können wir Großes erreichen.
-            </p>
-            
+        {/* Introduction Section */}
+        <section className="section" ref={introRef}>
+          <div className="container max-w-4xl">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gold/10 p-8 rounded-lg"
+              variants={fadeIn}
+              initial="hidden"
+              animate={introInView ? "visible" : "hidden"}
+              className="text-center"
             >
-              <Link
-                to="/apply?position=onlyfans"
-                className="btn-primary inline-flex items-center"
-              >
-                👉 Jetzt Bewerben und Teil unseres Teams werden!
-              </Link>
+              <p className="text-lg leading-relaxed mb-12">
+                Engel & Teufel unterstützt dich dabei, auf der weltweit führenden Plattform erfolgreich zu sein. 
+                Ob du bereits Erfahrung hast oder ganz neu durchstarten möchtest – wir bieten dir alles, was du für eine erfolgreiche und nachhaltige Karriere brauchst.
+              </p>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="section bg-[#2c3030]" ref={benefitsRef}>
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+              Deine Vorteile bei Engel & Teufel
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <BenefitCard key={index} {...benefit} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="section" ref={processRef}>
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+              Wie läuft die Zusammenarbeit ab?
+            </h2>
+            <div className="space-y-12">
+              {processSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeIn}
+                  initial="hidden"
+                  animate={processInView ? "visible" : "hidden"}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <ProcessStep {...step} number={index + 1} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Us Section */}
+        <section className="section bg-[#2c3030]" ref={whyUsRef}>
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+              Warum Engel & Teufel?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {whyUs.map((item, index) => (
+                <WhyUsCard key={index} {...item} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section" ref={ctaRef}>
+          <div className="container max-w-4xl">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              animate={ctaInView ? "visible" : "hidden"}
+              className="text-center"
+            >
+              <h2 className="text-3xl font-serif mb-6">
+                Bist du bereit, durchzustarten?
+              </h2>
+              <p className="text-lg mb-8">
+                Engel & Teufel bietet dir die Chance, mit OnlyFans ein solides Einkommen zu erzielen und deine Ziele zu erreichen. 
+                Mit unserer Erfahrung und deinem Engagement können wir Großes erreichen.
+              </p>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gold/10 p-8 rounded-lg"
+              >
+                <Link
+                  to="/apply?position=onlyfans"
+                  className="btn-primary inline-flex items-center"
+                >
+                  👉 Jetzt Bewerben und Teil unseres Teams werden!
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

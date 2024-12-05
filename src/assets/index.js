@@ -6,14 +6,15 @@ export const logos = {
 
 // Hero Images
 export const heroImages = {
-  home: '/images/hero/home.jpeg',
-  about: '/images/hero/home.jpeg',
-  services: '/images/hero/home.jpeg',
-  webcam: '/images/hero/home.jpeg',
-  onlyfans: '/images/hero/home.jpeg',
-  careers: '/images/hero/home.jpeg',
-  founder: '/images/hero/home.jpeg',
-  team: '/images/hero/home.jpeg',
-  contact: '/images/hero/home.jpeg',
-  apply: '/images/hero/home.jpeg'
+  home: '/images/hero/home.webp',
+  about: '/images/hero/home.webp',
+  services: '/images/hero/home.webp',
+  webcam: '/images/hero/home.webp',
+  onlyfans: '/images/hero/home.webp',
+  careers: '/images/hero/home.webp',
+  founder: '/images/hero/home.webp',
+  team: '/images/hero/home.webp',
+  contact: '/images/hero/home.webp',
+  apply: '/images/hero/home.webp',
+  company: '/images/hero/home.webp'
 };

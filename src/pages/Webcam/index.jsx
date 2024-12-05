@@ -7,6 +7,7 @@ import ProcessStep from '../../components/ProcessStep';
 import WhyUsCard from '../../components/WhyUsCard';
 import Hero from '../../components/Hero';
 import { heroImages } from '../../assets';
+import { Helmet } from 'react-helmet';
 
 const Webcam = () => {
   const fadeIn = {
@@ -86,112 +87,124 @@ const Webcam = () => {
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <Hero
-        title="Webcam Modeling"
-        subtitle="Starten Sie Ihre Karriere als Webcam Model"
-        imageSrc={heroImages.webcam}
-      />
+    <>
+      <Helmet>
+        <title>Webcam Model werden | Engel & Teufel</title>
+        <meta name="description" content="Starte deine Karriere als Webcam Model mit Engel & Teufel. Professionelle Betreuung, flexible Arbeitszeiten und Top-Verdienstmöglichkeiten." />
+        <meta name="keywords" content="Webcam Model, Camgirl, Webcam Jobs, Adult Webcam, Engel und Teufel, Webcam Verdienst" />
+        <meta property="og:title" content="Webcam Model werden | Engel & Teufel" />
+        <meta property="og:description" content="Starte deine Karriere als Webcam Model. Professionelle Betreuung und Top-Verdienstmöglichkeiten bei Engel & Teufel." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.engelteufel.com/webcam" />
+        <link rel="canonical" href="https://www.engelteufel.com/webcam" />
+      </Helmet>
+      <div className="flex flex-col min-h-screen">
+        {/* Hero Section */}
+        <Hero
+          title="Webcam Modeling"
+          subtitle="Starten Sie Ihre Karriere als Webcam Model"
+          imageSrc={heroImages.webcam}
+        />
 
-      {/* Introduction Section */}
-      <section className="section" ref={introRef}>
-        <div className="container max-w-4xl">
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            animate={introInView ? "visible" : "hidden"}
-            className="text-center"
-          >
-            <p className="text-lg leading-relaxed mb-12">
-              Engel & Teufel ist dein Partner für den Einstieg in die Webcam-Branche. Egal, ob du neu anfängst oder bereits Erfahrung hast – wir unterstützen dich dabei, deine Karriere aufzubauen und langfristig erfolgreich zu sein.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="section bg-[#2c3030]" ref={benefitsRef}>
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Deine Vorteile bei Engel & Teufel
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <BenefitCard key={index} {...benefit} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="section" ref={processRef}>
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Wie funktioniert es?
-          </h2>
-          <div className="space-y-12">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                variants={fadeIn}
-                initial="hidden"
-                animate={processInView ? "visible" : "hidden"}
-                transition={{ delay: index * 0.2 }}
-              >
-                <ProcessStep {...step} number={index + 1} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section className="section bg-[#2c3030]" ref={whyUsRef}>
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
-            Warum Engel & Teufel?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {whyUs.map((item, index) => (
-              <WhyUsCard key={index} {...item} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section" ref={ctaRef}>
-        <div className="container max-w-4xl">
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            animate={ctaInView ? "visible" : "hidden"}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-serif mb-6">
-              Bist du bereit, als Webcam-Model durchzustarten?
-            </h2>
-            <p className="text-lg mb-8">
-              Mit Engel & Teufel wirst du nicht nur erfolgreich, sondern auch sicher und professionell betreut. Dein Erfolg ist unser Ziel!
-            </p>
-            
+        {/* Introduction Section */}
+        <section className="section" ref={introRef}>
+          <div className="container max-w-4xl">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gold/10 p-8 rounded-lg"
+              variants={fadeIn}
+              initial="hidden"
+              animate={introInView ? "visible" : "hidden"}
+              className="text-center"
             >
-              <Link
-                to="/apply?position=webcam"
-                className="btn-primary inline-flex items-center"
-              >
-                👉 Jetzt Bewerben und Teil unseres Teams werden!
-              </Link>
+              <p className="text-lg leading-relaxed mb-12">
+                Engel & Teufel ist dein Partner für den Einstieg in die Webcam-Branche. Egal, ob du neu anfängst oder bereits Erfahrung hast – wir unterstützen dich dabei, deine Karriere aufzubauen und langfristig erfolgreich zu sein.
+              </p>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="section bg-[#2c3030]" ref={benefitsRef}>
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+              Deine Vorteile bei Engel & Teufel
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <BenefitCard key={index} {...benefit} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="section" ref={processRef}>
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+              Wie funktioniert es?
+            </h2>
+            <div className="space-y-12">
+              {processSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeIn}
+                  initial="hidden"
+                  animate={processInView ? "visible" : "hidden"}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <ProcessStep {...step} number={index + 1} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Us Section */}
+        <section className="section bg-[#2c3030]" ref={whyUsRef}>
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-serif text-center mb-12">
+              Warum Engel & Teufel?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {whyUs.map((item, index) => (
+                <WhyUsCard key={index} {...item} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section" ref={ctaRef}>
+          <div className="container max-w-4xl">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              animate={ctaInView ? "visible" : "hidden"}
+              className="text-center"
+            >
+              <h2 className="text-3xl font-serif mb-6">
+                Bist du bereit, als Webcam-Model durchzustarten?
+              </h2>
+              <p className="text-lg mb-8">
+                Mit Engel & Teufel wirst du nicht nur erfolgreich, sondern auch sicher und professionell betreut. Dein Erfolg ist unser Ziel!
+              </p>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gold/10 p-8 rounded-lg"
+              >
+                <Link
+                  to="/apply?position=webcam"
+                  className="btn-primary inline-flex items-center"
+                >
+                  👉 Jetzt Bewerben und Teil unseres Teams werden!
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
