@@ -12,6 +12,7 @@ import Karriere from './pages/Karriere';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
 import Founder from './pages/Founder';
+import Company from './pages/Company';
 import Webcam from './pages/Webcam';
 import TaxFreedom from './pages/TaxFreedom';
 import Freelancer from './pages/Freelancer';
@@ -38,6 +39,7 @@ function App() {
             <Route path="/founder" element={<Founder />} />
             <Route path="/team" element={<Team />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/company" element={<Company />} />
             <Route path="/karriere" element={<Karriere />} />
             <Route path="/onlyfans" element={<Onlyfans />} />
             <Route path="/freelancer" element={<Freelancer />} />
