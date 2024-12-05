@@ -117,7 +117,9 @@ const Company = () => {
         <Hero
           title="Unser Unternehmen"
           subtitle="Erfahrung trifft Innovation"
-          imageSrc={heroImages.company}
+          imageSrc={heroImages.company.desktop}
+          imageMobile={heroImages.company.mobile}
+          imageAlt="Engel & Teufel Unternehmen - Erfahrung trifft Innovation"
         />
 
         {/* Introduction Section */}

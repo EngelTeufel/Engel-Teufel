@@ -44,9 +44,11 @@ const Contact = () => {
       </Helmet>
       <div className="flex flex-col min-h-screen">
         <Hero
-          title="Kontaktieren Sie uns"
-          subtitle="Wir sind für Sie da"
-          imageSrc={heroImages.contact}
+          title="Kontakt"
+          subtitle="Wir sind für dich da"
+          imageSrc={heroImages.contact.desktop}
+          imageMobile={heroImages.contact.mobile}
+          imageAlt="Engel & Teufel Kontakt - Persönliche Beratung für deine Karriere"
         />
         {/* Main Content */}
         <section className="section">

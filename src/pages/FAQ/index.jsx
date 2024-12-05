@@ -140,9 +140,11 @@ const FAQ = () => {
       </Helmet>
       <div className="flex flex-col min-h-screen">
         <Hero
-          title="Häufig gestellte Fragen"
-          subtitle="Finden Sie schnell die richtigen Antworten"
-          imageSrc={heroImages.faq}
+          title="Häufige Fragen"
+          subtitle="Antworten auf deine Fragen"
+          imageSrc={heroImages.faq.desktop}
+          imageMobile={heroImages.faq.mobile}
+          imageAlt="Engel & Teufel FAQ - Häufig gestellte Fragen und Antworten"
         />
         {/* Hero Section */}
         <motion.section

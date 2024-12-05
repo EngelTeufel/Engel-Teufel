@@ -65,7 +65,9 @@ const Home = () => {
         <Hero
           title="Engel & Teufel"
           subtitle="Ihre Full-Service Agentur für OnlyFans & Webcam"
-          imageSrc={heroImages.home}
+          imageSrc={heroImages.home.desktop}
+          imageMobile={heroImages.home.mobile}
+          imageAlt="Engel & Teufel - Full-Service Agentur für OnlyFans & Webcam"
         />
 
         {/* Services Section */}

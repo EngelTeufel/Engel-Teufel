@@ -109,8 +109,10 @@ const Services = () => {
         <div className="flex-grow">
           <Hero
             title="Unsere Services"
-            subtitle="Professionelle Betreuung & Management"
-            imageSrc={heroImages.services}
+            subtitle="Professionelle Begleitung für deinen Erfolg"
+            imageSrc={heroImages.services.desktop}
+            imageMobile={heroImages.services.mobile}
+            imageAlt="Engel & Teufel Services - Professionelle Begleitung für OnlyFans & Webcam"
           />
 
           {/* Overview Section */}

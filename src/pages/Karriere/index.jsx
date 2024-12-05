@@ -104,8 +104,10 @@ const Karriere = () => {
       <div className="flex flex-col min-h-screen bg-dark">
         <Hero
           title="Karriere"
-          subtitle="Deine Zukunft beginnt hier"
-          imageSrc={heroImages.careers}
+          subtitle="Starte deine Karriere mit uns"
+          imageSrc={heroImages.careers.desktop}
+          imageMobile={heroImages.careers.mobile}
+          imageAlt="Engel & Teufel Karriere - Dein Start in die Webcam und OnlyFans Branche"
         />
 
         {/* Features Section */}

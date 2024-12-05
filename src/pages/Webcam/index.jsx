@@ -102,8 +102,10 @@ const Webcam = () => {
         {/* Hero Section */}
         <Hero
           title="Webcam Management"
-          subtitle="Ihr Weg zum erfolgreichen Webcam Model"
-          imageSrc={heroImages.webcam}
+          subtitle="Dein Weg zum erfolgreichen Webcam Model"
+          imageSrc={heroImages.webcam.desktop}
+          imageMobile={heroImages.webcam.mobile}
+          imageAlt="Engel & Teufel Webcam Management - Professionelle Betreuung für Webcam Models"
         />
 
         {/* Introduction Section */}

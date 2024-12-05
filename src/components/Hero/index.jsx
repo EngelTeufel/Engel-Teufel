@@ -5,6 +5,7 @@ const Hero = ({
   title, 
   subtitle, 
   imageSrc, 
+  imageMobile,
   imageAlt = '', 
   overlay = true,
   height = 'h-[70vh]',
@@ -14,11 +15,29 @@ const Hero = ({
     <div className={`relative w-full ${height} overflow-hidden`}>
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-full h-full object-cover"
-        />
+        <picture>
+          {/* Mobile Image */}
+          <source
+            media="(max-width: 768px)"
+            srcSet={imageMobile || imageSrc}
+            sizes="100vw"
+          />
+          {/* Desktop Image */}
+          <source
+            media="(min-width: 769px)"
+            srcSet={imageSrc}
+            sizes="100vw"
+          />
+          {/* Fallback Image */}
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-full object-cover"
+            width="1920"
+            height="1080"
+            loading="eager"
+          />
+        </picture>
         {overlay && (
           <>
             {/* Dark overlay for better text readability */}
@@ -60,6 +79,7 @@ const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8"
           >
             {children}
           </motion.div>

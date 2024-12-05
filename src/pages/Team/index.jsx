@@ -79,9 +79,10 @@ const Team = () => {
         {/* Hero Section */}
         <Hero
           title="Unser Team"
-          subtitle="Experten für Ihren Erfolg"
-          imageSrc={heroImages.team}
-          imageAlt="Engel & Teufel Team"
+          subtitle="Experten an deiner Seite"
+          imageSrc={heroImages.team.desktop}
+          imageMobile={heroImages.team.mobile}
+          imageAlt="Engel & Teufel Team - Experten für OnlyFans und Webcam Management"
         />
 
         {/* Intro Section */}

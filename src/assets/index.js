@@ -6,15 +6,52 @@ export const logos = {
 
 // Hero Images
 export const heroImages = {
-  home: '/images/hero/home.webp',
-  about: '/images/hero/home.webp',
-  services: '/images/hero/home.webp',
-  webcam: '/images/hero/home.webp',
-  onlyfans: '/images/hero/home.webp',
-  careers: '/images/hero/home.webp',
-  founder: '/images/hero/home.webp',
-  team: '/images/hero/home.webp',
-  contact: '/images/hero/home.webp',
-  apply: '/images/hero/home.webp',
-  company: '/images/hero/home.webp'
+  home: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  about: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  services: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  webcam: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  onlyfans: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  careers: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  founder: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  team: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  contact: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  apply: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  company: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  },
+  faq: {
+    desktop: '/images/hero/home-desktop.webp',
+    mobile: '/images/hero/home-mobile.webp'
+  }
 };

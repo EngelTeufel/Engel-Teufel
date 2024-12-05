@@ -68,9 +68,11 @@ const About = () => {
       <div className="flex flex-col min-h-screen">
         <div className="flex-grow">
           <Hero
-            title="Über Engel & Teufel"
-            subtitle="Ihre vertrauenswürdige Full-Service Agentur"
-            imageSrc={heroImages.about}
+            title="Über uns"
+            subtitle="Erfahre mehr über Engel & Teufel"
+            imageSrc={heroImages.about.desktop}
+            imageMobile={heroImages.about.mobile}
+            imageAlt="Über Engel & Teufel - Deine Full-Service Agentur für OnlyFans & Webcam"
           />
 
           {/* Mission Section */}

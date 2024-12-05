@@ -102,8 +102,10 @@ const Onlyfans = () => {
         {/* Hero Section */}
         <Hero
           title="OnlyFans Management"
-          subtitle="Professionelle Betreuung für Ihren Erfolg"
-          imageSrc={heroImages.onlyfans}
+          subtitle="Maximiere dein Potenzial auf OnlyFans"
+          imageSrc={heroImages.onlyfans.desktop}
+          imageMobile={heroImages.onlyfans.mobile}
+          imageAlt="Engel & Teufel OnlyFans Management - Professionelle Betreuung für Content Creator"
         />
 
         {/* Introduction Section */}
