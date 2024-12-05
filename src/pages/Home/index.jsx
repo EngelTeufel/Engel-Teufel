@@ -64,7 +64,7 @@ const Home = () => {
       <div className="flex flex-col min-h-screen bg-dark font-montserrat">
         <Hero
           title="Engel & Teufel"
-          subtitle="Dein Partner für professionellen Content"
+          subtitle="Ihre Full-Service Agentur für OnlyFans & Webcam"
           imageSrc={heroImages.home}
         />
 

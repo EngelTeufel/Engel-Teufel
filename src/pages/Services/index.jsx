@@ -109,7 +109,7 @@ const Services = () => {
         <div className="flex-grow">
           <Hero
             title="Unsere Services"
-            subtitle="Entdecke unsere umfassenden Dienstleistungen"
+            subtitle="Professionelle Betreuung & Management"
             imageSrc={heroImages.services}
           />
 

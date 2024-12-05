@@ -101,8 +101,8 @@ const Webcam = () => {
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <Hero
-          title="Webcam Modeling"
-          subtitle="Starten Sie Ihre Karriere als Webcam Model"
+          title="Webcam Management"
+          subtitle="Ihr Weg zum erfolgreichen Webcam Model"
           imageSrc={heroImages.webcam}
         />
 

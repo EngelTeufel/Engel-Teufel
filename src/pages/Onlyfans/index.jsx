@@ -101,8 +101,8 @@ const Onlyfans = () => {
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <Hero
-          title="Werde OnlyFans-Model mit Engel & Teufel"
-          subtitle="Starte deine Karriere auf OnlyFans – mit einem starken Partner an deiner Seite!"
+          title="OnlyFans Management"
+          subtitle="Professionelle Betreuung für Ihren Erfolg"
           imageSrc={heroImages.onlyfans}
         />
 

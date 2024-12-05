@@ -115,8 +115,8 @@ const Company = () => {
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <Hero
-          title="Unternehmen"
-          subtitle="Unsere Vision & Mission"
+          title="Unser Unternehmen"
+          subtitle="Erfahrung trifft Innovation"
           imageSrc={heroImages.company}
         />
 

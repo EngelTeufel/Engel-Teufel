@@ -140,9 +140,9 @@ const FAQ = () => {
       </Helmet>
       <div className="flex flex-col min-h-screen">
         <Hero
-          title="FAQ"
-          subtitle="Häufig gestellte Fragen"
-          imageSrc={heroImages.contact}
+          title="Häufig gestellte Fragen"
+          subtitle="Finden Sie schnell die richtigen Antworten"
+          imageSrc={heroImages.faq}
         />
         {/* Hero Section */}
         <motion.section

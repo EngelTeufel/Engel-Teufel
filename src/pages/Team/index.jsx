@@ -78,8 +78,8 @@ const Team = () => {
       <div className="min-h-screen">
         {/* Hero Section */}
         <Hero
-          title="Unser Team – Gemeinsam für deinen Erfolg"
-          subtitle="Das Herzstück von Engel & Teufel"
+          title="Unser Team"
+          subtitle="Experten für Ihren Erfolg"
           imageSrc={heroImages.team}
           imageAlt="Engel & Teufel Team"
         />

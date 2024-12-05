@@ -44,8 +44,8 @@ const Contact = () => {
       </Helmet>
       <div className="flex flex-col min-h-screen">
         <Hero
-          title="Kontakt"
-          subtitle="Wir freuen uns auf Ihre Nachricht"
+          title="Kontaktieren Sie uns"
+          subtitle="Wir sind für Sie da"
           imageSrc={heroImages.contact}
         />
         {/* Main Content */}

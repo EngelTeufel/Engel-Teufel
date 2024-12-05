@@ -39,20 +39,20 @@ const Hero = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-serif text-gold-light mb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-inknut text-gold-light mb-6 font-bold"
         >
           {title}
         </motion.h1>
         
         {subtitle && (
-          <motion.p
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-cream-light max-w-2xl mb-8"
+            className="text-xl md:text-2xl text-cream/90 font-light max-w-2xl"
           >
             {subtitle}
-          </motion.p>
+          </motion.h2>
         )}
 
         {children && (
