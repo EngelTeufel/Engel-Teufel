@@ -61,14 +61,12 @@ const Header = () => {
     },
     {
       label: 'Karriere',
-      path: '/careers',
+      path: '/karriere',
       hasMainPage: true,
       submenu: [
         { path: '/freelancer', label: 'Freelancer' }
       ]
     },
-    { path: '/blog', label: 'Blog' },
-    { path: '/faq', label: 'FAQ' },
     { path: '/contact', label: 'Kontakt' }
   ];
 

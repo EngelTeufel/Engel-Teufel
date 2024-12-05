@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Hero from '../../components/Hero';
 import { heroImages } from '../../assets';
 
-const Careers = () => {
+const Karriere = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -207,4 +207,4 @@ const Careers = () => {
   );
 };
 
-export default Careers;
+export default Karriere;
