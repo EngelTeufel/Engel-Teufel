@@ -90,8 +90,8 @@ const Onlyfans = () => {
     <>
       <Helmet>
         <title>OnlyFans Management & Beratung | Engel & Teufel</title>
-        <meta name="description" content="Professionelles OnlyFans Management und Beratung von Engel & Teufel. Maximiere deinen Erfolg auf OnlyFans mit unserer Expertise und Unterstützung." />
-        <meta name="keywords" content="OnlyFans Management, OnlyFans Beratung, Content Creator, Engel und Teufel, Adult Content, OnlyFans Erfolg" />
+        <meta name="description" content="Professionelles OnlyFans Management bei Engel & Teufel. Steigern Sie Ihre Reichweite und Einnahmen mit unserer Expertise. Individuelle Beratung und Support für Ihren OnlyFans-Erfolg." />
+        <meta name="keywords" content="OnlyFans Management, OnlyFans Beratung, Content Strategie, Social Media Marketing, OnlyFans Optimierung, OnlyFans Erfolg" />
         <meta property="og:title" content="OnlyFans Management & Beratung | Engel & Teufel" />
         <meta property="og:description" content="Professionelle Unterstützung für deinen OnlyFans-Erfolg. Maximiere dein Potenzial mit unserem erfahrenen Management-Team." />
         <meta property="og:type" content="website" />

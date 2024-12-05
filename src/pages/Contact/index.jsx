@@ -33,9 +33,9 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Kontakt | Engel & Teufel - Ihre Agentur für Adult Content</title>
-        <meta name="description" content="Kontaktieren Sie Engel & Teufel für Fragen zu OnlyFans, Webcam und Adult Content Creation. Unser Team steht Ihnen gerne zur Verfügung." />
-        <meta name="keywords" content="Kontakt, Engel und Teufel Kontakt, OnlyFans Beratung, Webcam Beratung, Adult Content Agentur" />
+        <title>Kontakt | Engel & Teufel</title>
+        <meta name="description" content="Kontaktieren Sie Engel & Teufel - Ihre Full-Service Agentur für OnlyFans und Webcam. Wir beraten Sie gerne persönlich und individuell zu allen Fragen." />
+        <meta name="keywords" content="Engel & Teufel Kontakt, Agentur Beratung, OnlyFans Beratung, Webcam Beratung, Persönliches Gespräch, Karriereberatung" />
         <meta property="og:title" content="Kontakt | Engel & Teufel" />
         <meta property="og:description" content="Haben Sie Fragen? Kontaktieren Sie uns - Ihr Team von Engel & Teufel steht Ihnen gerne zur Verfügung." />
         <meta property="og:type" content="website" />

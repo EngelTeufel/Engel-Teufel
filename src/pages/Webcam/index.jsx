@@ -90,8 +90,8 @@ const Webcam = () => {
     <>
       <Helmet>
         <title>Webcam Model werden | Engel & Teufel</title>
-        <meta name="description" content="Starte deine Karriere als Webcam Model mit Engel & Teufel. Professionelle Betreuung, flexible Arbeitszeiten und Top-Verdienstmöglichkeiten." />
-        <meta name="keywords" content="Webcam Model, Camgirl, Webcam Jobs, Adult Webcam, Engel und Teufel, Webcam Verdienst" />
+        <meta name="description" content="Starten Sie Ihre Karriere als Webcam Model bei Engel & Teufel. Profitieren Sie von hohen Verdienstmöglichkeiten, flexiblen Arbeitszeiten und professioneller Unterstützung." />
+        <meta name="keywords" content="Webcam Model werden, Webcam Jobs, Webcam Verdienst, Webcam Agentur, Webcam Model Karriere, Webcam Beratung" />
         <meta property="og:title" content="Webcam Model werden | Engel & Teufel" />
         <meta property="og:description" content="Starte deine Karriere als Webcam Model. Professionelle Betreuung und Top-Verdienstmöglichkeiten bei Engel & Teufel." />
         <meta property="og:type" content="website" />

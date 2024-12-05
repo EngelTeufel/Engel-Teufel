@@ -41,8 +41,8 @@ const Blog = () => {
     <>
       <Helmet>
         <title>Blog & News | Engel & Teufel</title>
-        <meta name="description" content="Aktuelle News, Tipps und Insights aus der Erotikbranche. Erfahre mehr über OnlyFans, Webcam und Content Creation im Engel & Teufel Blog." />
-        <meta name="keywords" content="Erotik Blog, OnlyFans News, Webcam Tipps, Content Creation, Adult Industry News, Engel und Teufel Blog" />
+        <meta name="description" content="Aktuelle News, Tipps und Insights aus der Branche. Bleiben Sie informiert mit dem Engel & Teufel Blog - Ihr Guide für OnlyFans und Webcam Erfolg." />
+        <meta name="keywords" content="OnlyFans Blog, Webcam News, Content Creator Tipps, Branchennews, Marketing Insights, Erfolgsstrategien" />
         <meta property="og:title" content="Blog & News | Engel & Teufel" />
         <meta property="og:description" content="Aktuelle News, Tipps und Insights aus der Erotikbranche. Bleib auf dem Laufenden mit dem Engel & Teufel Blog." />
         <meta property="og:type" content="website" />

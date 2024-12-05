@@ -93,8 +93,8 @@ const Karriere = () => {
     <>
       <Helmet>
         <title>Karriere & Jobs | Engel & Teufel</title>
-        <meta name="description" content="Starten Sie Ihre Karriere bei Engel & Teufel. Entdecken Sie spannende Jobmöglichkeiten im Bereich OnlyFans, Webcam und Adult Content Creation." />
-        <meta name="keywords" content="Karriere, Jobs, OnlyFans Model, Webcam Model, Content Creator, Adult Industry Jobs, Model Jobs" />
+        <meta name="description" content="Starten Sie Ihre Karriere bei Engel & Teufel. Entdecken Sie attraktive Jobmöglichkeiten im OnlyFans und Webcam Bereich mit Top-Verdienstmöglichkeiten und flexiblen Arbeitszeiten." />
+        <meta name="keywords" content="OnlyFans Jobs, Webcam Jobs, Model Karriere, Verdienstmöglichkeiten, Flexible Arbeitszeiten, Karrierechancen" />
         <meta property="og:title" content="Karriere & Jobs | Engel & Teufel" />
         <meta property="og:description" content="Ihre Karriere bei Engel & Teufel - Entdecken Sie vielfältige Möglichkeiten im Bereich Adult Content Creation." />
         <meta property="og:type" content="website" />

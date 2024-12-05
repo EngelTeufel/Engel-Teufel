@@ -103,9 +103,9 @@ const Company = () => {
   return (
     <>
       <Helmet>
-        <title>Engel & Teufel | Full-Service Agentur für die Erotikbranche</title>
-        <meta name="description" content="Engel & Teufel ist Ihre professionelle Full-Service Agentur für die Erotik- und Erwachsenenbranche. Wir bieten umfassende Unterstützung für Models und Content Creator." />
-        <meta name="keywords" content="Erotik Agentur, Full-Service Agentur, Model Management, Content Creator, Engel und Teufel, Adult Industry" />
+        <title>Unternehmen | Engel & Teufel - Full-Service Agentur</title>
+        <meta name="description" content="Lernen Sie Engel & Teufel kennen - Ihre vertrauenswürdige Full-Service Agentur für OnlyFans und Webcam. Entdecken Sie unsere Vision, Mission und Werte für Ihren Erfolg." />
+        <meta name="keywords" content="Engel & Teufel Unternehmen, Full-Service Agentur, OnlyFans Management, Webcam Agentur, Adult Content Creation, Unternehmenswerte" />
         <meta property="og:title" content="Engel & Teufel | Full-Service Agentur" />
         <meta property="og:description" content="Professionelle Full-Service Agentur für die Erotik- und Erwachsenenbranche. Experten für Model Management und Content Creation." />
         <meta property="og:type" content="website" />

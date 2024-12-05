@@ -56,9 +56,9 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>Über uns | Engel & Teufel - Ihre Full-Service Agentur</title>
-        <meta name="description" content="Lernen Sie Engel & Teufel kennen - Ihre vertrauenswürdige Full-Service Agentur für die Erotikbranche. Erfahren Sie mehr über unsere Geschichte, Vision und Werte." />
-        <meta name="keywords" content="Engel und Teufel, Erotik Agentur, Adult Industry, Agentur Geschichte, Unternehmenswerte, Vision" />
+        <title>Über uns | Engel & Teufel</title>
+        <meta name="description" content="Erfahren Sie mehr über Engel & Teufel - Ihre vertrauenswürdige Full-Service Agentur. Wir verbinden Professionalität mit persönlicher Betreuung für Ihren Erfolg." />
+        <meta name="keywords" content="Über Engel & Teufel, Full-Service Agentur, Unternehmenswerte, OnlyFans Management, Webcam Agentur, Agenturgeschichte" />
         <meta property="og:title" content="Über uns | Engel & Teufel" />
         <meta property="og:description" content="Entdecken Sie die Geschichte und Vision von Engel & Teufel - Ihre vertrauenswürdige Full-Service Agentur für die Erotikbranche." />
         <meta property="og:type" content="website" />

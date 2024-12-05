@@ -97,8 +97,8 @@ const Services = () => {
     <>
       <Helmet>
         <title>Services & Leistungen | Engel & Teufel</title>
-        <meta name="description" content="Entdecken Sie unsere umfassenden Services für OnlyFans, Webcam und Adult Content Creation. Professionelle Betreuung und Unterstützung für Ihren Erfolg." />
-        <meta name="keywords" content="OnlyFans Management, Webcam Services, Content Creation, Adult Industry, Model Management, Marketing Services" />
+        <meta name="description" content="Entdecken Sie unsere professionellen Services für OnlyFans und Webcam. Von Marketing bis Beratung - Engel & Teufel bietet Ihnen alle Leistungen für nachhaltigen Erfolg." />
+        <meta name="keywords" content="OnlyFans Services, Webcam Management, Content Creation, Marketing Services, Model Beratung, Karriereberatung" />
         <meta property="og:title" content="Services & Leistungen | Engel & Teufel" />
         <meta property="og:description" content="Professionelle Services für OnlyFans, Webcam und Adult Content Creation. Ihr Partner für nachhaltigen Erfolg." />
         <meta property="og:type" content="website" />

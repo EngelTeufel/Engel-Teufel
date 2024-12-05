@@ -52,9 +52,9 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Engel & Teufel | Full-Service Agentur für Erotik & Adult Content</title>
-        <meta name="description" content="Engel & Teufel ist Ihre professionelle Full-Service Agentur für OnlyFans, Webcam und Adult Content Creation. Starten Sie jetzt Ihre erfolgreiche Karriere!" />
-        <meta name="keywords" content="Erotik Agentur, OnlyFans Management, Webcam Agentur, Adult Content, Model Management, Engel und Teufel" />
+        <title>Engel & Teufel | Full-Service Agentur für OnlyFans & Webcam</title>
+        <meta name="description" content="Engel & Teufel - Ihre professionelle Full-Service Agentur für OnlyFans, Webcam und Adult Content Creation. Maximieren Sie Ihren Erfolg mit unserem erfahrenen Team." />
+        <meta name="keywords" content="OnlyFans Management, Webcam Agentur, Adult Content Creation, Model Management, OnlyFans Beratung, Webcam Model werden" />
         <meta property="og:title" content="Engel & Teufel | Full-Service Agentur" />
         <meta property="og:description" content="Ihre professionelle Full-Service Agentur für OnlyFans, Webcam und Adult Content Creation. Starten Sie jetzt!" />
         <meta property="og:type" content="website" />

@@ -130,8 +130,8 @@ const FAQ = () => {
     <>
       <Helmet>
         <title>FAQ - Häufig gestellte Fragen | Engel & Teufel</title>
-        <meta name="description" content="Finden Sie Antworten auf häufig gestellte Fragen zu OnlyFans, Webcam Modeling und unseren Services. Alle wichtigen Informationen für Models bei Engel & Teufel." />
-        <meta name="keywords" content="FAQ, Häufige Fragen, OnlyFans FAQ, Webcam Model FAQ, Engel und Teufel FAQ, Adult Content FAQ" />
+        <meta name="description" content="Finden Sie Antworten auf häufig gestellte Fragen zu OnlyFans und Webcam bei Engel & Teufel. Umfassende Informationen zu unseren Services, Verdienstmöglichkeiten und mehr." />
+        <meta name="keywords" content="FAQ OnlyFans, FAQ Webcam, Häufige Fragen, Verdienstmöglichkeiten, Model werden, Agentur FAQ" />
         <meta property="og:title" content="FAQ - Häufig gestellte Fragen | Engel & Teufel" />
         <meta property="og:description" content="Alle wichtigen Informationen und Antworten auf häufig gestellte Fragen zu unseren Services bei Engel & Teufel." />
         <meta property="og:type" content="website" />

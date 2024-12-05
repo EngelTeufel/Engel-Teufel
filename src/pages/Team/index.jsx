@@ -67,8 +67,8 @@ const Team = () => {
     <>
       <Helmet>
         <title>Unser Team | Engel & Teufel</title>
-        <meta name="description" content="Lernen Sie das professionelle Team von Engel & Teufel kennen. Experten für OnlyFans, Webcam und Adult Content Creation stehen Ihnen zur Seite." />
-        <meta name="keywords" content="Engel und Teufel Team, OnlyFans Experten, Content Creation Team, Adult Industry Profis, Model Management" />
+        <meta name="description" content="Lernen Sie das professionelle Team von Engel & Teufel kennen. Experten für OnlyFans und Webcam mit langjähriger Erfahrung stehen Ihnen zur Seite." />
+        <meta name="keywords" content="Engel & Teufel Team, OnlyFans Experten, Webcam Spezialisten, Content Creation Team, Marketing Experten, Beratungsteam" />
         <meta property="og:title" content="Unser Team | Engel & Teufel" />
         <meta property="og:description" content="Professionelle Experten für OnlyFans, Webcam und Adult Content Creation - Das Team von Engel & Teufel." />
         <meta property="og:type" content="website" />
